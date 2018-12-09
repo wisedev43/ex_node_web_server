@@ -39,7 +39,13 @@ app.get('/about',(req, res)=>{
   res.render('about.hbs', {
     pageTitle: 'About Page',
     currentYear: new Date().getFullYear()
-  })
+  });
+});
+
+app.get('/project', (req, res)=>{
+  res.render('projects.hbs', {
+    pageTitle: 'Project Page'
+  });
 });
 
 app.listen(port, () => {
